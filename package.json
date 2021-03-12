@@ -16,7 +16,7 @@
     "name": "Thiago Lagden",
     "email": "lagden@gmail.com"
   },
-  "main": "src/index.js",
+  "browser": "src/index.js",
   "files": [
     "src",
     "license",
