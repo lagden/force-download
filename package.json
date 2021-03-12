@@ -1,0 +1,53 @@
+{
+  "name": "@tadashi/force-download",
+  "version": "1.0.0",
+  "description": "Helper to force download",
+  "keywords": [
+    "force-download",
+    "input",
+    "tiny"
+  ],
+  "bug": {
+    "url": "https://github.com/lagden/force-download",
+    "email": "lagden@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Thiago Lagden",
+    "email": "lagden@gmail.com"
+  },
+  "browser": "src/index.js",
+  "files": [
+    "src",
+    "license",
+    "README.md"
+  ],
+  "repository": "lagden/force-download",
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "xo",
+    "test": "karma start ./karma.conf.js"
+  },
+  "xo": {
+    "envs": [
+      "es6"
+    ],
+    "globals": [
+      "QUnit",
+      "document"
+    ],
+    "esnext": true,
+    "semicolon": false,
+    "rules": {
+      "capitalized-comments": 0,
+      "unicorn/prevent-abbreviations": 0
+    }
+  },
+  "devDependencies": {
+    "karma": "6.2.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage": "2.0.3",
+    "karma-qunit": "4.1.2",
+    "xo": "0.38.2"
+  }
+}
