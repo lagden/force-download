@@ -17,7 +17,7 @@ Helper to force download
 ## Install
 
 ```
-$ npm i -S @tadashi/force-download
+$ npm i -S @tadashi/fd
 ```
 
 
@@ -29,7 +29,7 @@ Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
 <button type="button" id="downloadFile">Download</button>
 
 <script type="module">
-  import {download} from 'https://unpkg.com/@tadashi/force-download@1.0.0/src/index.js'
+  import {download} from 'https://unpkg.com/@tadashi/fd@1.0.0/src/index.js'
 
   async function getFile(url, filename) {
     const response = await globalThis.fetch(url)

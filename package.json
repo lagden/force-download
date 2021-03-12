@@ -1,6 +1,6 @@
 {
-  "name": "@tadashi/force-download",
-  "version": "1.0.0",
+  "name": "@tadashi/fd",
+  "version": "1.0.1",
   "description": "Helper to force download",
   "keywords": [
     "force-download",
