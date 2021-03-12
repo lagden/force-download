@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/fd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helper to force download",
   "keywords": [
     "force-download",
@@ -16,7 +16,7 @@
     "name": "Thiago Lagden",
     "email": "lagden@gmail.com"
   },
-  "browser": "src/index.js",
+  "main": "src/index.js",
   "files": [
     "src",
     "license",
