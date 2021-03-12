@@ -12,6 +12,10 @@ module.exports = config => {
 			{
 				pattern: './src/*.js',
 				type: 'module'
+			},
+			{
+				pattern: './test/*.js',
+				type: 'module'
 			}
 		],
 
