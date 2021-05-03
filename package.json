@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/fd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helper to force download",
   "keywords": [
     "force-download",
@@ -44,11 +44,12 @@
     }
   },
   "devDependencies": {
-    "karma": "6.2.0",
+    "karma": "6.3.2",
     "karma-chrome-launcher": "3.1.0",
     "karma-coverage": "2.0.3",
+    "karma-firefox-launcher": "2.1.0",
     "karma-qunit": "4.1.2",
-    "qunit": "2.14.0",
-    "xo": "0.38.2"
+    "qunit": "2.15.0",
+    "xo": "0.39.1"
   }
 }

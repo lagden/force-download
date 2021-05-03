@@ -1,7 +1,7 @@
 'use strict'
 
 export async function download(response, filename) {
-	const disposition = response?.headers?.['content-disposition']
+	const disposition = response?.headers.get('content-disposition')
 	const regex = /filename=["']?(?<filename>[\w.-]+)["']?/g
 	const match = regex.exec(disposition)
 	filename = match?.groups?.filename ?? filename
