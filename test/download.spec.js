@@ -1,6 +1,6 @@
 'use strict'
 
-import {download} from '../src/index.js'
+import {download} from '../src/download.js'
 
 // // TODO - criar uma API que retorne `content-disposition`
 // QUnit.test('download content-disposition', async assert => {

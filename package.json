@@ -16,7 +16,8 @@
     "name": "Thiago Lagden",
     "email": "lagden@gmail.com"
   },
-  "main": "src/index.js",
+  "main": "src/download.js",
+  "type": "module",
   "files": [
     "src",
     "license",
@@ -26,16 +27,17 @@
   "scripts": {
     "prepublishOnly": "npm test",
     "pretest": "xo",
-    "test": "karma start ./karma.conf.js"
+    "test": "karma start ./karma.conf.cjs"
   },
   "xo": {
     "envs": [
-      "es6"
+      "es2021"
     ],
     "globals": [
       "QUnit",
       "document"
     ],
+    "ignores": ["bin/**/*.js"],
     "esnext": true,
     "semicolon": false,
     "rules": {

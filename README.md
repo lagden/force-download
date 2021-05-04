@@ -29,7 +29,7 @@ Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
 <button type="button" id="downloadFile">Download</button>
 
 <script type="module">
-  import {download} from 'https://unpkg.com/@tadashi/fd@1.0.0/src/index.js'
+  import {download} from 'https://unpkg.com/@tadashi/fd@{version}/src/download.js'
 
   async function getFile(url, filename) {
     const response = await globalThis.fetch(url)
@@ -37,7 +37,7 @@ Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
   }
 
   downloadFile.addEventListener('click', async () => {
-    await getFile('https://api.mocki.io/v1/871ab1d2', 'foo.json')
+    await getFile('https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8', 'foo.json')
   })
 </script>
 ```

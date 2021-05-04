@@ -9,7 +9,7 @@
 	<body>
 		<button type="button" id="downloadFile">Download</button>
 		<script type="module">
-			import {download} from '../src/index.js'
+			import {download} from '../src/download.js'
 
 			async function getFile(url, filename) {
 				const response = await globalThis.fetch(url)
