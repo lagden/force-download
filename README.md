@@ -4,8 +4,8 @@
 [![Coverage Status][coveralls-img]][coveralls]
 [![XO code style][xo-img]][xo]
 
-[ci-img]:        https://github.com/lagden/force-download/workflows/Node.js%20CI/badge.svg
-[ci]:            https://github.com/lagden/force-download/actions?query=workflow%3A%22Node.js+CI%22
+[ci-img]:        https://github.com/lagden/force-download/actions/workflows/nodejs.yml/badge.svg
+[ci]:            https://github.com/lagden/force-download/actions/workflows/nodejs.yml
 [coveralls-img]: https://coveralls.io/repos/github/lagden/force-download/badge.svg?branch=main
 [coveralls]:     https://coveralls.io/github/lagden/force-download?branch=main
 [xo-img]:        https://img.shields.io/badge/code_style-XO-5ed9c7.svg
@@ -17,7 +17,7 @@ Helper to force download
 ## Install
 
 ```
-$ npm i -S @tadashi/fd
+$ npm i @tadashi/fd
 ```
 
 
@@ -26,20 +26,20 @@ $ npm i -S @tadashi/fd
 Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
 
 ```html
-<button type="button" id="downloadFile">Download</button>
-
 <script type="module">
-  import {download} from 'https://unpkg.com/@tadashi/fd@{version}/src/download.js'
+  import {download} from 'https://unpkg.com/@tadashi/fd'
 
-  async function getFile(url, filename) {
-    const response = await globalThis.fetch(url)
-    await download(response, filename)
-  }
-
-  downloadFile.addEventListener('click', async () => {
-    await getFile('https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8', 'foo.json')
+  btn.addEventListener('click', async () => {
+    const response = await globalThis.fetch('https://mdn.github.io/dom-examples/picture-in-picture/assets/bigbuckbunny.mp4')
+    await download(response, 'xxx.mp4', percent => {
+      const p = progress.percent * 100
+      bar.value = p
+    })
   })
 </script>
+
+<button type="button" id="btn">Download</button>
+<progress id="bar" value="0" max="100"></progress>
 ```
 
 

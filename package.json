@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/fd",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Helper to force download",
   "keywords": [
     "force-download",
@@ -16,7 +16,11 @@
     "name": "Thiago Lagden",
     "email": "lagden@gmail.com"
   },
-  "main": "src/download.js",
+  "exports": {
+    ".": "./src/download.js",
+    "./stream.js": "./src/stream.js"
+  },
+  "main": "./src/download.js",
   "type": "module",
   "files": [
     "src",
@@ -37,7 +41,9 @@
       "QUnit",
       "document"
     ],
-    "ignores": ["bin/**/*.js"],
+    "ignores": [
+      "bin/**/*.js"
+    ],
     "esnext": true,
     "semicolon": false,
     "rules": {
@@ -46,12 +52,11 @@
     }
   },
   "devDependencies": {
-    "karma": "6.3.2",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-coverage": "2.0.3",
-    "karma-firefox-launcher": "2.1.0",
+    "karma": "6.4.2",
+    "karma-chrome-launcher": "3.2.0",
+    "karma-coverage": "2.2.1",
     "karma-qunit": "4.1.2",
-    "qunit": "2.15.0",
-    "xo": "0.39.1"
+    "qunit": "2.20.0",
+    "xo": "0.56.0"
   }
 }

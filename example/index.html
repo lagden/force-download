@@ -5,20 +5,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>Example</title>
-	</head>
-	<body>
-		<button type="button" id="downloadFile">Download</button>
 		<script type="module">
 			import {download} from '../src/download.js'
 
-			async function getFile(url, filename) {
-				const response = await globalThis.fetch(url)
-				await download(response, filename)
-			}
-
-			downloadFile.addEventListener('click', async () => {
-				await getFile('https://api.mocki.io/v1/871ab1d2', 'foo.json')
+			btn.addEventListener('click', async () => {
+				const response = await globalThis.fetch('https://services.teleport.com.br/cors/load/?url=https://www.pexels.com/download/video/3129671/')
+				await download(response, 'xxx.mp4', percent => {
+					const p = progress.percent * 100
+					bar.value = p
+				})
 			})
 		</script>
+	</head>
+	<body>
+		<button type="button" id="btn">Download</button>
+		<progress id="bar" value="0" max="100"></progress>
 	</body>
 </html>

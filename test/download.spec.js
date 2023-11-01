@@ -1,16 +1,13 @@
-'use strict'
-
 import {download} from '../src/download.js'
 
-// // TODO - criar uma API que retorne `content-disposition`
-// QUnit.test('download content-disposition', async assert => {
-// 	const response = await globalThis.fetch('http://0.0.0.0:31116/__data/?download=1')
-// 	await download(response)
-// 	assert.ok(true, 'download success')
-// })
+QUnit.test('download content-disposition', async assert => {
+	const response = await globalThis.fetch('https://services.teleport.com.br/cors/load/?url=https://www.pexels.com/download/video/3129671/')
+	await download(response)
+	assert.ok(true, 'download success')
+})
 
 QUnit.test('download', async assert => {
-	const response = await globalThis.fetch('https://service.teleport.com.br/mol/v1/')
+	const response = await globalThis.fetch('https://services.teleport.com.br/mol-rest/')
 	await download(response, 'mol.json')
 	assert.ok(true, 'download success')
 })
