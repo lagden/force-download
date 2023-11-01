@@ -10,7 +10,7 @@
 
 			btn.addEventListener('click', async () => {
 				const response = await globalThis.fetch('https://services.teleport.com.br/cors/load/?url=https://www.pexels.com/download/video/3129671/')
-				await download(response, 'xxx.mp4', percent => {
+				await download(response, 'xxx.mp4', progress => {
 					const p = progress.percent * 100
 					bar.value = p
 				})

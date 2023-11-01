@@ -31,7 +31,7 @@ Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
 
   btn.addEventListener('click', async () => {
     const response = await globalThis.fetch('https://mdn.github.io/dom-examples/picture-in-picture/assets/bigbuckbunny.mp4')
-    await download(response, 'xxx.mp4', percent => {
+    await download(response, 'xxx.mp4', progress => {
       const p = progress.percent * 100
       bar.value = p
     })
@@ -43,6 +43,11 @@ Codepen example: https://codepen.io/lagden/pen/QWGzRXZ?editors=1010
 ```
 
 
+## Donate ❤️
+
+- BTC: bc1q7famhuj5f25n6qvlm3sssnymk2qpxrfwpyq7g4
+
+
 ## License
 
-MIT © Thiago Lagden
+MIT © [Thiago Lagden](https://github.com/lagden)
